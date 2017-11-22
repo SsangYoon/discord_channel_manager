@@ -1,7 +1,7 @@
 from setuptools import setup
 import re, os
 
-on_rtd = os.getenv('READTHEDOCS') == 'True'
+on_rtd = os.getenv('READTHEDOCS') == 'False'
 
 requirements = []
 with open('requirements.txt') as f:
@@ -17,10 +17,6 @@ with open('discord/__init__.py') as f:
 if not version:
     raise RuntimeError('version is not set')
 
-readme = ''
-with open('README.md') as f:
-    readme = f.read()
-
 extras_require = {
     'voice': ['PyNaCl==1.0.1'],
 }
@@ -32,7 +28,6 @@ setup(name='discord.py',
       packages=['discord', 'discord.ext.commands'],
       license='MIT',
       description='A python wrapper for the Discord API',
-      long_description=readme,
       include_package_data=True,
       install_requires=requirements,
       extras_require=extras_require,
