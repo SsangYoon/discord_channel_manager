@@ -9,7 +9,7 @@
 - /moveall : 현재 Voice채널 사용자를 채널로 이동시킵니다.
 
 ## Requirements
-- Python 3.5 later
+- Python 3.4
 
 ## Source
 - discord.py : https://github.com/Rapptz/discord.py
